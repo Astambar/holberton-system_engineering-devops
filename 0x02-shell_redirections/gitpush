@@ -1,0 +1,8 @@
+#!/bin/bash
+echo "Commit Message ?"
+read message
+echo "File to push ?"
+read file
+sudo git add ${file}
+sudo git commit -m "${message}"
+sudo git push
