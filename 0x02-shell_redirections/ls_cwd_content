@@ -3,26 +3,6 @@
 ..
 0-hello_world
 1-confused_smiley
-2-hellofile
-3-twofiles
-4-lastlines
-4-lastlines~
-5-firstlines
-6-third_line
-7-file
-7-file~
-README.md
-SomeFile.txt
-\*\\'"Best School"\'\\*$\?\*\*\*\*\*:)
-\*\\\'"Best School"\\'\\*$\?\*\*\*\*\*:)
-gitpush
-gitpush~
-ls_cwd_content
-#6-third_line#
-.
-..
-0-hello_world
-1-confused_smiley
 10-no_more_js
 11-directories
 2-hellofile
