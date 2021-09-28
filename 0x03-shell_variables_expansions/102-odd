@@ -1,2 +1,2 @@
 #!/bin/bash
-sed -n 1~2p
+gawk 'NR%2==0 {print}' test | head
