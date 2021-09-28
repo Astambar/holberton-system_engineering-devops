@@ -1,2 +1,2 @@
 #!/bin/bash
-gawk 'NR%2==0 {print}' | head
+paste -d, - - | cut -d, -f1
