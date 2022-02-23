@@ -1,5 +1,9 @@
 #!/usr/bin/env ruby
-regexs = /from:(.*?)\]\s\[to:(.*?)\]\s\[flags:(.*?)\]/
-x = ARGV
-# Print the match result
-puts str.scan(regexs).join(",")
+
+str = [
+	ARGV[0].scan(/\[(from:.*?)\]/).join().split(":")[1],
+	ARGV[0].scan(/\[(to:.*?)\]/).join().split(":")[1],
+	ARGV[0].scan(/\[(flags:.*?)\]/).join().split(":",2)[1]
+]
+
+puts str.join(",")
