@@ -2,4 +2,4 @@
 regexs = /from:(.*?)\]\s\[to:(.*?)\]\s\[flags:(.*?)\]/
 x = ARGV
 # Print the match result
-puts x[0].scan(regexs).join(", ")
+puts str.scan(regexs).join(",")
