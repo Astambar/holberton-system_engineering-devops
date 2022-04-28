@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-[[ -n "$1" ]] && ping -c 5 "$1" || echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"

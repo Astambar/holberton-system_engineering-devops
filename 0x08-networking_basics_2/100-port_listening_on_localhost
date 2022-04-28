@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-# théorique test
-nc -l localhost 98
