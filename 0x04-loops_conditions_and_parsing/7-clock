@@ -8,8 +8,8 @@ do
     while [ $min -le 59 ]
     do
 	echo "$min"
-	let min++
+	((min++))
     done
     min=1
-    let hour++
+    ((hour++))
 done
