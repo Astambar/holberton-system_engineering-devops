@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-# kills the task 7-highlander
+#tue la tâche 7-highlander
 kill -9 "$(pgrep -f 7-highlander)"
