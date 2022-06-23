@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+table=(
+	"127.0.0.4 localhost"
+	"8.8.8.8 facebook.com"
+	"6.6.6.6 twitter.com"
+	)
+str=""
+longueur=${#table[@]}
+longueur=$((longueur - 1))
+cp /etc/hosts ~/hosts.new
+echo ${longueur}
+
+for (( i=0; i<=longueur; i++))
+do
+  echo "${table[i]}"
+  str+=${table[i]}
+  if [ $i -lt $longueur ]
+then
+    echo "la variable est plus petit que longueur à $longueur"
+	str+="\n"
+fi
+done
+echo "fusion"
+echo "s/127.*$/$str/"
+echo "original"
+printf "s/127.*$/127.0.0.2 localhost\n8.8.8.7 facebook.com/"
+sed -i "s/127.*$/$str/" ~/hosts.new
+cp -f ~/hosts.new /etc/hosts
