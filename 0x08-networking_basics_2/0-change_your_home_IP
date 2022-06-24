@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Comment
 table=(
 	"127.0.0.2 localhost"
 	"8.8.8.8 facebook.com"
