@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # etape 1 filtrer les élement contenant inet
 # etape 2 récuperer seulement les valeur numérique et les points
-netstat -tn | tail -n +3 | awk '{print $5}'
+ifconfig | grep -oE 'inet\s([0-9]+\.?){4}' | grep -oE '([0-9]+\.?){4}'
