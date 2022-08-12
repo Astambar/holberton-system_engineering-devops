@@ -1,4 +1,4 @@
-#puppet file
+#fichier de package puppet
 
 
 package { 'flask':
