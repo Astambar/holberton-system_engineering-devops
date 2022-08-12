@@ -1,4 +1,7 @@
-# puppet-lint is installed using Puppet version is 2.5.0
-package { 'puppet-lint':
-  ensure => '2.5.0',
+#puppet file
+
+
+package { 'flask':
+  ensure   => '2.1.0',
+  provider => 'pip3',
 }
