@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC2154
 # Script bash qui transfère un fichier de notre client vers un serveur
-sudo su
 if [ ${#@} -eq 4 ]
 then
     scp -o StrictHostKeyChecking=False -i "$4" "$1" "$3@$2":~
@@ -13,10 +12,9 @@ fi
 apt-get update -y
 apt-get install -y nginx
 echo "Hello World!" > /var/www/html/index.nginx-debian.html
-sed -i "/server_name _;/ a\\\trewrite ^/redirect_me http://www.holbertonschool.com permanent;" /etc/nginx/sites-available/default
+sed -i "/server_name _;/a add_header X-Served-By $HOSTNAME;" /etc/nginx/sites-available/default
 # 404 not found
 sed -i "/redirect_me/ a\\\terror_page 404 /custom_404.html;" /etc/nginx/sites-available/default
 echo "Ceci n'est pas une page" > /var/www/html/custom_404.html
-sed -i "/http {/a \ \tadd_header X-Served-By $HOSTNAME;" /etc/nginx/nginx.conf
 
 service nginx start
