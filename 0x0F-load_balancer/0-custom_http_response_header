@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# shellcheck disable=SC2154
 # Script bash qui transfère un fichier de notre client vers un serveur
 if [ ${#@} -eq 4 ]
 then
@@ -8,7 +9,6 @@ else
 fi
 
 # Script bash qui configure une nouvelle machine Ubuntu
-# 
 apt-get update -y
 apt-get install -y nginx
 echo "Hello World!" > /var/www/html/index.nginx-debian.html
