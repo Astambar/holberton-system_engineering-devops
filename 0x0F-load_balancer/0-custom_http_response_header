@@ -8,6 +8,7 @@ else
 fi
 
 # Script bash qui configure une nouvelle machine Ubuntu
+# 
 apt-get update -y
 apt-get install -y nginx
 echo "Hello World!" > /var/www/html/index.nginx-debian.html
@@ -15,4 +16,6 @@ sed -i "/server_name _;/ a\\\trewrite ^/redirect_me http://www.holbertonschool.c
 # 404 not found
 sed -i "/redirect_me/ a\\\terror_page 404 /custom_404.html;" /etc/nginx/sites-available/default
 echo "Ceci n'est pas une page" > /var/www/html/custom_404.html
+sed -i "/http {/a \ \tadd_header X-Served-By $HOSTNAME;" /etc/nginx/nginx.conf
+
 service nginx start
