@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-# shellcheck disable=SC2154
-# Script bash qui transfère un fichier de notre client vers un serveur
+#configures a brand new Ubuntu machine to the requirements asked in this task
 sudo apt-get -y update
 sudo apt-get -y install nginx
 sed -i "/listen \[::\]:80 default_server;/a\add_header X-Served-By $(hostname);" /etc/nginx/sites-available/default
