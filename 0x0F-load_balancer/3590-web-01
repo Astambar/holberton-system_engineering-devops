@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# utiliser la clé privée pour se connecter
+ssh ubuntu@54.83.125.162 -i ~/.ssh/school
