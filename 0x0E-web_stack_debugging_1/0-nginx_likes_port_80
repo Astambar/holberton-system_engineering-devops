@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
 # debbug bujkfktjdrtdyi
-sudo apt update -y
-sudo apt install nginx -y
-sudo ufw allow 'Nginx HTTP'
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 sudo service nginx restart
