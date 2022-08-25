@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # debbug
-ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 sudo service nginx restart
