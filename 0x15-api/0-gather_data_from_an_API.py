@@ -29,7 +29,13 @@ if __name__ == "__main__":
             did += 1
         total += 1
 
-    print(f"Employee {userName} is done with tasks({did}/{total}):")
+    print(
+        "Employee {} is done with tasks({}/{}):".format(
+            userName,
+            did,
+            total
+        )
+    )
 
     for idx in todoList:
         print("\t " + idx)
