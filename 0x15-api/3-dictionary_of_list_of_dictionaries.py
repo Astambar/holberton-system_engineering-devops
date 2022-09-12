@@ -16,7 +16,9 @@ if __name__ == "__main__":
 
     for user in users:
         userId = user["id"]
-        response = requests.get("https://jsonplaceholder.typicode.com/users/{}/todos".format(userId))
+        response = requests.get(
+            "https://jsonplaceholder.typicode.com/users/{}/todos".format(
+                userId))
         todos = response.json()
 
         dataDict[str(user["id"])] = []
