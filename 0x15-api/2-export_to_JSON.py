@@ -29,6 +29,5 @@ if __name__ == "__main__":
             "username": userName,
         })
 
-    f = open('{}.json'.format(userId), 'w')
-    json.dump(userDict, f)
-    f.close()
+    with open(f'{userId}.json', 'w') as f:
+        json.dump(userDict, f)
