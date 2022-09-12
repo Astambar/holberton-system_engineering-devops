@@ -18,18 +18,17 @@ if __name__ == "__main__":
     )
     json = response.json()
 
-    i = 0
     lists = []
     did = 0
-    total = 0
+    count = 0
 
     for idx in json:
         if idx["completed"]:
             lists.append(idx["title"])
             did += 1
-        total += 1
+        count += 1
 
-    print("Employee {} is done with tasks({}/{}):".format(userName, did, total)
+    print("Employee {} is done with tasks({}/{}):".format(userName, did, count)
           )
 
     for idx in lists:
