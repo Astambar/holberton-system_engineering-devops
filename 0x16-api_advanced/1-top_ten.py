@@ -7,8 +7,10 @@ import requests
 
 def top_ten(subreddit):
     """
-    The top_ten function takes a subreddit as an argument and returns the top 10
-    hot posts for that subreddit. If the subreddit does not exist, it returns None.
+    The top_ten function takes a subreddit
+    as an argument and returns the top 10
+    hot posts for that subreddit.
+    If the subreddit does not exist, it returns None.
 
     :param subreddit: Pass the name of the subreddit to be analyzed
     :return: The titles of the first 10 hot posts listed for a given subreddit
@@ -20,7 +22,7 @@ def top_ten(subreddit):
         headers={'User-Agent': 'Holberton'}
     )
     if responseIsReq.status_code == 404:
-         print("None")
+        print("None")
     else:
         data = responseIsReq.json()["data"]["children"]
         for title in data[:10]:
