@@ -7,16 +7,20 @@ import requests
 
 def number_of_subscribers(subreddit):
     """
-    queries the Reddit API
-    Returns:
-        number of subscribers
-        0 if invalid subreddit given
+    The number_of_subscribers function returns the number
+    of subscribers for a given subreddit.
+       If the subreddit does not exist, it returns 0.
+
+    :param subreddit: Specify the subreddit to be queried
+    :return: The number of subscribers to a specific subreddit
+    :doc-author: Trelent
     """
-    response = requests.get("https://www.reddit.com/r/{}/about.json".format(subreddit),
-                            headers={'User-Agent': 'Holberton'})
 
+    responseIsReq = requests.get("https://www.reddit.com/r/{}/about.json".
+                                 format(subreddit),
+                                 headers={'User-Agent': 'Holberton'})
 
-    if response.status_code == 404:
+    if responseIsReq.status_code == 404:
         return 0
 
-    return response.json()["data"]["subscribers"]
+    return responseIsReq.json()["data"]["subscribers"]
