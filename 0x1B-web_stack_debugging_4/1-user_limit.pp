@@ -1,4 +1,4 @@
-#increase hard and soft limit fixToo Many Open Files Error
+# augmenter la correction des limites matérielles et logicielles Trop d'erreurs de fichiers ouverts
 
 exec { 'soft-limit':
   command => 'echo "nginx       soft    holberton   1000" > /etc/security/limits.conf',
